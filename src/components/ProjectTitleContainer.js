@@ -8,7 +8,7 @@ export default function ProjectTitleContainer({ info, title }) {
   return (
     <div className="project-title-container">
       <h2 id="project-title">{title}</h2>
-      {title !== 'eyesong' && (
+      {title !== 'eyesong' && title !== 'an alien Hampsfellian' && (
         <p>
           hover <br />
           over video

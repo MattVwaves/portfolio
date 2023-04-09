@@ -3,7 +3,7 @@ export default function TFAInfo() {
     <p>
       Curation and E-commerce website for a most splendid artist from across the
       channel, who creates all kinds of wonderfully cute and sexy stuff - from
-      patches to penis earrings
+      patches to striking portrait photography
       <br />
       <br />
       Currently optimised for mobile viewports/not that responsive but it will

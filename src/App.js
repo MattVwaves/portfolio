@@ -15,6 +15,9 @@ import ProjectTitleContainer from './components/ProjectTitleContainer';
 
 import TFAInfo from './components/TFAInfo';
 import PSInfo from './components/PSInfo';
+import HampsfellInfo from './components/HampsfellInfo';
+import OdtInfo from './components/OdtInfo';
+import CatsInfo from './components/CatsInfo';
 import PFInfo from './components/PFInfo';
 import SocialList from './components/SocialList';
 import Eye from './components/Eye';
@@ -26,6 +29,15 @@ function App() {
   const [showCatsControls, setShowCatsControls] = useState(false);
 
   const handleShowControls = (e) => {};
+
+  const opts = {
+    height: '177',
+    width: '175',
+    playerVars: {
+      autoplay: 0,
+      modestbranding: 1,
+    },
+  };
 
   return (
     <>
@@ -94,28 +106,24 @@ function App() {
 
           <div className="project-container">
             <ProjectTitleContainer
-              info={<TFAInfo />}
+              info={<HampsfellInfo />}
               title={'an alien Hampsfellian'}
             />
             <div className="video-container">
-              <video
-                controls={showHampsfellControls}
+              <Youtube
+                controls={showOdtControls}
                 playsinline
                 muted
-                onMouseEnter={() => setShowHampsfellControls(1)}
-                onMouseLeave={() => setShowHampsfellControls(0)}
-              >
-                {/* <source src={`${Hampsfell}#t=0.001`} type="video/mp4" /> */}
-              </video>
-              {/* <RepoLinks
-                clientUrl="https://github.com/MattVwaves/That-French-Artist-Client"
-                serverUrl="https://github.com/MattVwaves/That-French-Artist-Server"
-              /> */}
+                autoplay
+                videoId="2JoAbTjx3WE"
+                opts={opts}
+              />
+              {/* <source src={`${Hampsfell}#t=0.001`} type="video/mp4" /> */}
             </div>
           </div>
 
           <div className="project-container">
-            <ProjectTitleContainer info={<TFAInfo />} title="Oh dear" />
+            <ProjectTitleContainer info={<OdtInfo />} title="Oh Dear Times" />
             <div className="video-container">
               <video
                 controls={showCatsControls}
@@ -135,7 +143,7 @@ function App() {
           </div>
           <div className="project-container">
             <ProjectTitleContainer
-              info={<TFAInfo />}
+              info={<CatsInfo />}
               title="Les chat dans la maison"
             />
             <div className="video-container">
