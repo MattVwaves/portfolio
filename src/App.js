@@ -1,24 +1,176 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import Youtube from 'react-youtube';
+
 import './App.css';
+import './Eye.css';
+// import OhDearTimes from './assets/videos/Oh-dear-times_HB.mp4';
+import PatchesVideo2 from './assets/videos/TFA-tidy-demo_HB.mp4';
+import Cats from './assets/videos/cats-complete_HB.mp4';
+import TfaPoster from './assets/tfa-poster.png';
+import odt from './assets/videos/odt.mp4';
+
+import Header from './components/Header';
+import RepoLinks from './components/RepoLinks';
+import ProjectTitleContainer from './components/ProjectTitleContainer';
+
+import TFAInfo from './components/TFAInfo';
+import PSInfo from './components/PSInfo';
+import PFInfo from './components/PFInfo';
+import SocialList from './components/SocialList';
+import Eye from './components/Eye';
 
 function App() {
+  const [showTfaControls, setShowTfaControls] = useState(false);
+  const [showHampsfellControls, setShowHampsfellControls] = useState(false);
+  const [showOdtControls, setShowOdtControls] = useState(0);
+  const [showCatsControls, setShowCatsControls] = useState(false);
+
+  const handleShowControls = (e) => {};
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <meta
+        meta
+        name="viewport"
+        content="width=device-width, user-scalable=no"
+      />
+      <img
+        id="bg-img"
+        src={require('./assets/me-pointing.jpg')}
+        alt="bg-img"
+        height="500px"
+      />
+      <img
+        id="bg-img-2"
+        src={require('./assets/close-me-bw.jpg')}
+        alt="bg-img"
+        height="500px"
+      />
+      <Header />
+      <div className="projects-title-container">
+        <h3 id="projects-title">Projects</h3>
+      </div>
+
+      <div className="outer-projects-container">
+        <div className="projects-container">
+          <div className="project-container">
+            <ProjectTitleContainer
+              info={<TFAInfo />}
+              title="That French Artist"
+            />
+            <div className="video-container">
+              <video
+                controls={showTfaControls}
+                playsinline
+                onMouseEnter={() => setShowTfaControls(true)}
+                onMouseLeave={() => setShowTfaControls(false)}
+              >
+                <source src={`${PatchesVideo2}#t=0.001`} type="video/mp4" />
+              </video>
+              <RepoLinks
+                clientUrl="https://github.com/MattVwaves/That-French-Artist-Client"
+                serverUrl="https://github.com/MattVwaves/That-French-Artist-Server"
+              />
+            </div>
+          </div>
+
+          <div className="project-container">
+            <ProjectTitleContainer info={<PSInfo />} title="eyesong" />
+            <div className="video-container">
+              <Eye />
+              {/* <img
+                width="100%"
+                height="fit-content"
+                src={require('./assets/eyesong.png')}
+                alt="pop-shiester-img"
+                id="cover"
+              /> */}
+              <RepoLinks
+                clientUrl="https://github.com/MattVwaves/eyesong-client"
+                serverUrl="https://github.com/MattVwaves/eyesong-server"
+              />
+            </div>
+          </div>
+
+          <div className="project-container">
+            <ProjectTitleContainer
+              info={<TFAInfo />}
+              title={'an alien Hampsfellian'}
+            />
+            <div className="video-container">
+              <video
+                controls={showHampsfellControls}
+                playsinline
+                muted
+                onMouseEnter={() => setShowHampsfellControls(1)}
+                onMouseLeave={() => setShowHampsfellControls(0)}
+              >
+                {/* <source src={`${Hampsfell}#t=0.001`} type="video/mp4" /> */}
+              </video>
+              {/* <RepoLinks
+                clientUrl="https://github.com/MattVwaves/That-French-Artist-Client"
+                serverUrl="https://github.com/MattVwaves/That-French-Artist-Server"
+              /> */}
+            </div>
+          </div>
+
+          <div className="project-container">
+            <ProjectTitleContainer info={<TFAInfo />} title="Oh dear" />
+            <div className="video-container">
+              <video
+                controls={showCatsControls}
+                playsinline
+                muted
+                autoplay
+                onMouseEnter={() => setShowCatsControls(true)}
+                onMouseLeave={() => setShowCatsControls(false)}
+              >
+                <source src={odt} type="video/mp4" />
+              </video>
+              {/* <RepoLinks
+                clientUrl="https://github.com/MattVwaves/That-French-Artist-Client"
+                serverUrl="https://github.com/MattVwaves/That-French-Artist-Server"
+              /> */}
+            </div>
+          </div>
+          <div className="project-container">
+            <ProjectTitleContainer
+              info={<TFAInfo />}
+              title="Les chat dans la maison"
+            />
+            <div className="video-container">
+              <video
+                controls={showCatsControls}
+                playsinline
+                muted
+                autoplay
+                onMouseEnter={() => setShowCatsControls(true)}
+                onMouseLeave={() => setShowCatsControls(false)}
+              >
+                <source src={`${Cats}#t=0.001`} type="video/mp4" />
+              </video>
+              {/* <RepoLinks
+                clientUrl="https://github.com/MattVwaves/That-French-Artist-Client"
+                serverUrl="https://github.com/MattVwaves/That-French-Artist-Server"
+              /> */}
+            </div>
+          </div>
+
+          {/* <div className="project-container">
+            <ProjectTitleContainer info={<PFInfo />} title="Portfolio" />
+            <div className="video-container">
+              <img
+                width="100%"
+                height="450px"
+                src={require('./assets/portnew.png')}
+                alt="pop-shiester-img"
+              />
+              <RepoLinks clientUrl="https://github.com/MattVwaves/portfolio-2" />
+            </div>
+          </div> */}
+        </div>
+      </div>
+    </>
   );
 }
 
