@@ -24,8 +24,7 @@ import Eye from './components/Eye';
 
 function App() {
   const [showTfaControls, setShowTfaControls] = useState(false);
-  const [showHampsfellControls, setShowHampsfellControls] = useState(false);
-  const [showOdtControls, setShowOdtControls] = useState(0);
+  const [showOdtControls, setShowOdtControls] = useState(false);
   const [showCatsControls, setShowCatsControls] = useState(false);
 
   const handleShowControls = (e) => {};
@@ -126,12 +125,12 @@ function App() {
             <ProjectTitleContainer info={<OdtInfo />} title="Oh Dear Times" />
             <div className="video-container">
               <video
-                controls={showCatsControls}
+                controls={showOdtControls}
                 playsinline
                 muted
                 autoplay
-                onMouseEnter={() => setShowCatsControls(true)}
-                onMouseLeave={() => setShowCatsControls(false)}
+                onMouseEnter={() => setShowOdtControls(true)}
+                onMouseLeave={() => setShowOdtControls(false)}
               >
                 <source src={odt} type="video/mp4" />
               </video>
@@ -144,7 +143,7 @@ function App() {
           <div className="project-container">
             <ProjectTitleContainer
               info={<CatsInfo />}
-              title="Les chat dans la maison"
+              title="les chats dans la nouvelle maison"
             />
             <div className="video-container">
               <video
