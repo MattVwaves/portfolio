@@ -6,11 +6,11 @@ export default function OdtInfo() {
       him to meet his digital self.
       <br />
       <br />
-      Once the animation was done, the music was drastically edited to create
-      the wholistic experience it obviously became.
+      Once the edit and animation was done, the music was drastically edited to
+      create the wholistic experience it obviously became.
       <br />
       <br />
-      Constructed ala: All kinds of things
+      Animation made with After Effects.
     </p>
   );
 }

@@ -6,7 +6,7 @@ export default function CatsInfo() {
       <br />
       <br />
       The result is a fairly minimalist piece, starting from an initial sequence
-      declaration that is repeated in increasingly abstracted forms
+      declaration that is repeated in increasingly abstracted forms.
     </p>
   );
 }

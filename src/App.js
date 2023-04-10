@@ -14,7 +14,7 @@ import RepoLinks from './components/RepoLinks';
 import ProjectTitleContainer from './components/ProjectTitleContainer';
 
 import TFAInfo from './components/TFAInfo';
-import PSInfo from './components/PSInfo';
+import EyesongInfo from './components/EyesongInfo';
 import HampsfellInfo from './components/HampsfellInfo';
 import OdtInfo from './components/OdtInfo';
 import CatsInfo from './components/CatsInfo';
@@ -86,7 +86,7 @@ function App() {
           </div>
 
           <div className="project-container">
-            <ProjectTitleContainer info={<PSInfo />} title="eyesong" />
+            <ProjectTitleContainer info={<EyesongInfo />} title="eyesong" />
             <div className="video-container">
               <Eye />
               <RepoLinks
