@@ -2,7 +2,7 @@ export default function SocialList({ handleShowEmail }) {
   return (
     <ul className="social-email">
       <li>
-        <a href="https://github.com/MattVwaves">
+        <a href="https://github.com/MattVwaves" target="_blank">
           <img
             src={require('../assets/github.png')}
             height="35px"
@@ -11,7 +11,7 @@ export default function SocialList({ handleShowEmail }) {
         </a>
       </li>
       <li>
-        <a href="https://github.com/MattVwaves">
+        <a href="https://github.com/MattVwaves" target="_blank">
           <img
             src={require('../assets/linkd.png')}
             height="30px"

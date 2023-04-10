@@ -29,7 +29,7 @@ export default function ProjectTitleContainer({ info, title }) {
       <span>
         {title === 'eyesong' && (
           <>
-            <a href="https://eyesong-client.onrender.com/">
+            <a href="https://eyesong-client.onrender.com/" target="_blank">
               <p id="live-text">LIVE!!!</p>
 
               {/* <img src={require('../assets/live.png')} id="live" /> */}

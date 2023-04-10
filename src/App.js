@@ -3,12 +3,9 @@ import Youtube from 'react-youtube';
 
 import './App.css';
 import './Eye.css';
-// import OhDearTimes from './assets/videos/Oh-dear-times_HB.mp4';
 import PatchesVideo2 from './assets/videos/TFA-tidy-demo_HB.mp4';
 import Cats from './assets/videos/cats-complete_HB.mp4';
-import TfaPoster from './assets/tfa-poster.png';
 import odt from './assets/videos/odt.mp4';
-
 import Header from './components/Header';
 import RepoLinks from './components/RepoLinks';
 import ProjectTitleContainer from './components/ProjectTitleContainer';
@@ -22,10 +19,13 @@ import PFInfo from './components/PFInfo';
 import SocialList from './components/SocialList';
 import Eye from './components/Eye';
 
+let iMadeThisTxt = 'I also made this tidy, lil portfolio page';
+
 function App() {
   const [showTfaControls, setShowTfaControls] = useState(false);
   const [showOdtControls, setShowOdtControls] = useState(false);
   const [showCatsControls, setShowCatsControls] = useState(false);
+  const [txt, setTxt] = useState('');
 
   const handleShowControls = (e) => {};
 
@@ -61,6 +61,12 @@ function App() {
       <div className="projects-title-container">
         <h3 id="projects-title">Projects</h3>
       </div>
+
+      <p id="i-made-this">
+        I also made this tidy,
+        <br />
+        lil portfolio page
+      </p>
 
       <div className="outer-projects-container">
         <div className="projects-container">
@@ -110,7 +116,6 @@ function App() {
                 videoId="2JoAbTjx3WE"
                 opts={opts}
               />
-              {/* <source src={`${Hampsfell}#t=0.001`} type="video/mp4" /> */}
             </div>
           </div>
 
@@ -120,17 +125,12 @@ function App() {
               <video
                 controls={showOdtControls}
                 playsinline
-                muted
                 autoplay
                 onMouseEnter={() => setShowOdtControls(true)}
                 onMouseLeave={() => setShowOdtControls(false)}
               >
                 <source src={odt} type="video/mp4" />
               </video>
-              {/* <RepoLinks
-                clientUrl="https://github.com/MattVwaves/That-French-Artist-Client"
-                serverUrl="https://github.com/MattVwaves/That-French-Artist-Server"
-              /> */}
             </div>
           </div>
           <div className="project-container">
@@ -149,10 +149,6 @@ function App() {
               >
                 <source src={`${Cats}#t=0.001`} type="video/mp4" />
               </video>
-              {/* <RepoLinks
-                clientUrl="https://github.com/MattVwaves/That-French-Artist-Client"
-                serverUrl="https://github.com/MattVwaves/That-French-Artist-Server"
-              /> */}
             </div>
           </div>
 
