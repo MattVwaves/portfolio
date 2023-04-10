@@ -89,13 +89,6 @@ function App() {
             <ProjectTitleContainer info={<PSInfo />} title="eyesong" />
             <div className="video-container">
               <Eye />
-              {/* <img
-                width="100%"
-                height="fit-content"
-                src={require('./assets/eyesong.png')}
-                alt="pop-shiester-img"
-                id="cover"
-              /> */}
               <RepoLinks
                 clientUrl="https://github.com/MattVwaves/eyesong-client"
                 serverUrl="https://github.com/MattVwaves/eyesong-server"

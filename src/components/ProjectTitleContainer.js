@@ -16,12 +16,7 @@ export default function ProjectTitleContainer({ info, title }) {
           to play
         </p>
       )}
-      {title === 'eyesong' && (
-        <>
-          <p id="live-text">LIVE!!!</p>
-          <img src={require('../assets/live.png')} id="live" />
-        </>
-      )}
+
       <span>
         <img
           src={require('../assets/info.png')}
@@ -30,6 +25,17 @@ export default function ProjectTitleContainer({ info, title }) {
           alt="info-icon"
           onClick={handleShowInfo}
         />
+      </span>
+      <span>
+        {title === 'eyesong' && (
+          <>
+            <a href="https://eyesong-client.onrender.com/">
+              <p id="live-text">LIVE!!!</p>
+
+              {/* <img src={require('../assets/live.png')} id="live" /> */}
+            </a>
+          </>
+        )}
       </span>
       {showInfo && <div className="project-details-popup">{info}</div>}
     </div>

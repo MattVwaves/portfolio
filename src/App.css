@@ -15,6 +15,7 @@ li {
 a {
   text-decoration: none;
   color: black;
+  z-index: 2;
 }
 
 p {
@@ -267,12 +268,15 @@ h5 {
 #live-text {
   background-color: yellow;
   padding: 5px;
+  z-index: 3;
+  display: inline;
+  margin-left: 20px;
 }
 
 #live {
   height: 30px;
-  margin: 50px 0px 0px 10px;
-  display: block;
+  margin: 0px 0px 0px 10px;
+  /* display: block; */
   position: absolute;
   /* background-color: yellow; */
 }
