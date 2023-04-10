@@ -62,11 +62,7 @@ function App() {
         <h3 id="projects-title">Projects</h3>
       </div>
 
-      <p id="i-made-this">
-        I also made this tidy,
-        <br />
-        lil portfolio page
-      </p>
+      <p id="i-made-this">I also made this tidy, lil' portfolio page</p>
 
       <div className="outer-projects-container">
         <div className="projects-container">
