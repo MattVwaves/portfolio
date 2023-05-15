@@ -26,17 +26,7 @@ export default function ProjectTitleContainer({ info, title }) {
           onClick={handleShowInfo}
         />
       </span>
-      <span>
-        {title === 'eyesong' && (
-          <>
-            <a href="https://eyesong-client.onrender.com/" target="_blank">
-              <p id="live-text">LIVE!!!</p>
 
-              {/* <img src={require('../assets/live.png')} id="live" /> */}
-            </a>
-          </>
-        )}
-      </span>
       {showInfo && <div className="project-details-popup">{info}</div>}
     </div>
   );

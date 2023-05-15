@@ -81,8 +81,8 @@ function App() {
                 <source src={`${PatchesVideo2}#t=0.001`} type="video/mp4" />
               </video>
               <RepoLinks
-                clientUrl="https://github.com/MattVwaves/That-French-Artist-Client"
-                serverUrl="https://github.com/MattVwaves/That-French-Artist-Server"
+                liveUrl="https://thatfrenchartist.onrender.com/"
+                githubUrl="https://github.com/MattVwaves/That-French-Artist-Client"
               />
             </div>
           </div>
@@ -92,13 +92,13 @@ function App() {
             <div className="video-container">
               <Eye />
               <RepoLinks
-                clientUrl="https://github.com/MattVwaves/eyesong-client"
-                serverUrl="https://github.com/MattVwaves/eyesong-server"
+                liveUrl="https://eyesong-client.onrender.com"
+                githubUrl="https://github.com/MattVwaves/eyesong-client"
               />
             </div>
           </div>
 
-          <div className="project-container">
+          {/* <div className="project-container">
             <ProjectTitleContainer
               info={<HampsfellInfo />}
               title={'an alien Hampsfellian'}
@@ -113,9 +113,9 @@ function App() {
                 opts={opts}
               />
             </div>
-          </div>
+          </div> */}
 
-          <div className="project-container">
+          {/* <div className="project-container">
             <ProjectTitleContainer info={<OdtInfo />} title="Oh Dear Times" />
             <div className="video-container">
               <video
@@ -128,8 +128,9 @@ function App() {
                 <source src={odt} type="video/mp4" />
               </video>
             </div>
-          </div>
-          <div className="project-container">
+          </div> */}
+
+          {/* <div className="project-container">
             <ProjectTitleContainer
               info={<CatsInfo />}
               title="les chats dans la nouvelle maison"
@@ -146,7 +147,7 @@ function App() {
                 <source src={`${Cats}#t=0.001`} type="video/mp4" />
               </video>
             </div>
-          </div>
+          </div> */}
 
           {/* <div className="project-container">
             <ProjectTitleContainer info={<PFInfo />} title="Portfolio" />

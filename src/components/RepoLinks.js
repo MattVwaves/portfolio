@@ -1,25 +1,25 @@
-export default function RepoLinks({ clientUrl, serverUrl }) {
+export default function RepoLinks({ liveUrl, githubUrl }) {
   return (
     <div className="repo-links-container">
       <div className="repo-links">
         <div className="repo-link">
-          <a href={clientUrl} target="_blank">
-            client
+          <a href={liveUrl} target="_blank">
+            live
           </a>
-          <a href={clientUrl} target="_blank">
+          <a href={liveUrl} target="_blank">
             <img
-              src={require('../assets/github.png')}
+              src={require('../assets/live.png')}
               height="35px"
               alt="github-icon"
             />
           </a>
         </div>
-        {serverUrl && (
+        {githubUrl && (
           <div className="repo-link">
-            <a href={serverUrl} target="_blank">
-              server
+            <a href={githubUrl} target="_blank">
+              github
             </a>
-            <a href={serverUrl} target="_blank">
+            <a href={githubUrl} target="_blank">
               <img
                 src={require('../assets/github.png')}
                 height="35px"
