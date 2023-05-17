@@ -1,42 +1,19 @@
 import { useState } from 'react';
-import Youtube from 'react-youtube';
 
 import './App.css';
 import './Eye.css';
 import PatchesVideo2 from './assets/videos/TFA-tidy-demo_HB.mp4';
-import Cats from './assets/videos/cats-complete_HB.mp4';
-import odt from './assets/videos/odt.mp4';
+import TfaVideo from './assets/videos/TFA-may_HB.mp4';
 import Header from './components/Header';
 import RepoLinks from './components/RepoLinks';
 import ProjectTitleContainer from './components/ProjectTitleContainer';
 
 import TFAInfo from './components/TFAInfo';
 import EyesongInfo from './components/EyesongInfo';
-import HampsfellInfo from './components/HampsfellInfo';
-import OdtInfo from './components/OdtInfo';
-import CatsInfo from './components/CatsInfo';
-import PFInfo from './components/PFInfo';
-import SocialList from './components/SocialList';
 import Eye from './components/Eye';
-
-let iMadeThisTxt = 'I also made this tidy, lil portfolio page';
 
 function App() {
   const [showTfaControls, setShowTfaControls] = useState(false);
-  const [showOdtControls, setShowOdtControls] = useState(false);
-  const [showCatsControls, setShowCatsControls] = useState(false);
-  const [txt, setTxt] = useState('');
-
-  const handleShowControls = (e) => {};
-
-  const opts = {
-    height: '177',
-    width: '175',
-    playerVars: {
-      autoplay: 0,
-      modestbranding: 1,
-    },
-  };
 
   return (
     <>
@@ -78,7 +55,7 @@ function App() {
                 onMouseEnter={() => setShowTfaControls(true)}
                 onMouseLeave={() => setShowTfaControls(false)}
               >
-                <source src={`${PatchesVideo2}#t=0.001`} type="video/mp4" />
+                <source src={`${TfaVideo}#t=0.001`} type="video/mp4" />
               </video>
               <RepoLinks
                 liveUrl="https://thatfrenchartist.onrender.com/"
